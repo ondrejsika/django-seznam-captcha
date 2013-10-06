@@ -1,0 +1,2 @@
+recursive-include django_seznam_captcha/static *
+recursive-include django_seznam_captcha/templates *
