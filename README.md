@@ -23,7 +23,15 @@ add to root urls
 
 ## Usage
 
-create form from `django_seznam_captcha.forms.CaptchaForm`
+use `django_seznam_captcha.fields.CaptchaField`
+
+    from django_seznam_captcha.fields import CaptchaField
+
+    class MyForm(forms.Form):
+        usename = forms.CharField()
+        captcha = CaptchaField()
+
+or create form from `django_seznam_captcha.forms.CaptchaForm`
 
     from django_seznam_captcha.forms import CaptchaForm
     
