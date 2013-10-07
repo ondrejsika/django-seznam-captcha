@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-seznam-captcha",
-    version = "1.0.0",
+    version = "1.1.0",
     url = 'https://github.com/sikaondrej/django-seznam-captcha/',
     download_url = 'https://github.com/sikaondrej/django-seznam-captcha/',
     license = 'GNU LGPL v.3',
