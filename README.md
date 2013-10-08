@@ -1,7 +1,9 @@
 django-seznam-captcha
 =====================
 
-Django wraper for Seznam Captcha
+Django captcha field and form using Captcha by [Seznam.cz](http://seznam.cz).
+
+More information about Seznam captcha in docs <http://captcha-api.seznam.cz>
 
 ### Authors
 *  Ondrej Sika, <http://ondrejsika.com>, ondrej@ondrejsika.com
@@ -16,7 +18,11 @@ install via pip
 
     pip install django-seznam-captcha
     
-add to root urls
+add to `INSTALLED_APPS` in `settings.py`
+
+    INSTALLED_APPS += ("django_seznam_captcha", )
+
+and add to root urls
 
     urlpatterns += url(r'^seznam-captcha/', include('django_seznam_captcha.urls'))
 
@@ -25,6 +31,7 @@ add to root urls
 
 use `django_seznam_captcha.fields.CaptchaField`
 
+    from django import forms
     from django_seznam_captcha.fields import CaptchaField
 
     class MyForm(forms.Form):
