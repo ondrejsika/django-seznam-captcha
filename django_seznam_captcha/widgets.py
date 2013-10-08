@@ -6,18 +6,10 @@ from django.template.loader import render_to_string
 
 
 class CaptchaImageWidget(forms.widgets.Widget):
-    def render(self, name, value, attrs={}):
-        return mark_safe(render_to_string(
-            "seznam_captcha/captcha_image_widget.html",
-            {"rnd":random.randint(1000, 9999), "name":name}
-        ))
+    pass
 
 class CaptchaInputWidget(forms.widgets.Widget):
-    def render(self, name, value, attrs={}):
-        return mark_safe(render_to_string(
-            "seznam_captcha/captcha_input_widget.html",
-            {"rnd":random.randint(1000, 9999), "name":name}
-        ))
+    pass
 
 class CaptchaWidget(forms.widgets.MultiWidget):
     def __init__(self, *args, **kwargs):
@@ -32,3 +24,9 @@ class CaptchaWidget(forms.widgets.MultiWidget):
 
     def decompress(self, value):
         return [None, None]
+
+    def render(self, name, value, attrs={}):
+        return mark_safe(render_to_string(
+            "seznam_captcha/captcha_widget.html",
+            {"name":name, }
+        ))
