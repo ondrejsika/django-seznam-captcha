@@ -8,7 +8,7 @@ setup(
     version = "1.2.0",
     url = 'https://github.com/sikaondrej/django-seznam-captcha/',
     download_url = 'https://github.com/sikaondrej/django-seznam-captcha/',
-    license = 'GNU LGPL v.3',
+    license = 'MIT',
     description = "",
     author = 'Ondrej Sika',
     author_email = 'ondrej@ondrejsika.com',
