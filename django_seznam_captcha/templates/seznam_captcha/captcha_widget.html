@@ -9,23 +9,12 @@
     </tr>
     <tr>
         <td>
-            <a onclick="generate()" style="cursor:pointer">reset</a>
+            <a onclick="generate(getCaptchaName())" style="cursor:pointer">reset</a>
         </td>
     </tr>
 </table>
 
 <input id="seznam-captcha-key-{{name}}" type="hidden" name="{{name}}_0">
-<script>
-get = function(url){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", url, false);
-    xmlhttp.send();
-    return xmlhttp.responseText;
-}
-function generate(){
-    key = get("/seznam-captcha/create/");
-    document.getElementById("seznam-captcha-img-{{name}}").src = "http://captcha.seznam.cz/captcha.getImage?hash="+key
-    document.getElementById("seznam-captcha-key-{{name}}").value = key;
-}
-generate()
-</script>
+
+<script src="{{STATIC_URL}}seznam_captcha/captcha_widget.js" type="application/javascript"></script>
+

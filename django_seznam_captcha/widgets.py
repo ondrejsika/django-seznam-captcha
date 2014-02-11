@@ -3,6 +3,7 @@ import random
 from django import forms
 from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
+from django.conf import settings
 
 
 class CaptchaImageWidget(forms.widgets.Widget):
@@ -28,5 +29,6 @@ class CaptchaWidget(forms.widgets.MultiWidget):
     def render(self, name, value, attrs={}):
         return mark_safe(render_to_string(
             "seznam_captcha/captcha_widget.html",
-            {"name":name, }
+            {"name":name, "STATIC_URL": settings.STATIC_URL, }
         ))
+
