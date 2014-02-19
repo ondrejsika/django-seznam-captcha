@@ -47,3 +47,7 @@ or create form from `django_seznam_captcha.forms.CaptchaForm`
 
         class Meta:
              fields = ("username", "captcha", )
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ondrejsika/django-seznam-captcha/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
