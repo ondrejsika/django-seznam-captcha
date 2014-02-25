@@ -16,6 +16,8 @@ function getCaptchaName(){
 }
 
 $(function(){
-    generate(getCaptchaName());
+    if ($('.seznam-captcha-input').length){
+        generate(getCaptchaName());
+    }
 })
 
